@@ -1,0 +1,105 @@
+
+/* Base Styles & Reset */
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-base);
+}
+
+/* Input & Textarea Styles */
+input,
+textarea,
+select {
+    color: var(--color-black) !important;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--color-gray-500) !important;
+    opacity: 1;
+}
+
+/* Select Box Placeholder Styles */
+select:required:invalid {
+    color: var(--color-gray-500) !important;
+}
+
+option[value=""][disabled] {
+    display: none;
+}
+
+option {
+    color: var(--color-black) !important;
+}
+
+/* Date Input Styles */
+
+input[type="date"]:invalid::-webkit-datetime-edit {
+    color: var(--color-gray-500) !important;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    width: 32px;
+    height: 100%;
+    cursor: pointer;
+}
+
+input.error {
+    border-color: #e74c3c !important;
+}
+
+/* Container */
+.container {
+    width: auto;
+    height: 100vh;
+    background-color: var(--color-gray-50);
+}
+
+/* Utility */
+::-webkit-resizer {
+    background: transparent;
+}
+
+/* DEFAULT – visible scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-gray-300);
+    border-radius: 10px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+/* HOVER – scrollbar only */
+::-webkit-scrollbar:hover {
+    width: 15px;
+    background-color: var(--color-gray-50);
+}
+
+::-webkit-scrollbar:hover::-webkit-scrollbar-track {
+    background-color: var(--color-gray-50);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    border: 0;
+}

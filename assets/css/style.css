@@ -1,0 +1,122 @@
+/* Content Layout */
+.container {
+    height: 100vh;
+    padding: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 1100;
+    min-width: 1000px;
+    overflow-x: auto;
+}
+
+.container .header {
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-white);
+    align-items: center;
+}
+
+.content {
+    position: relative;
+    height: calc(100% - 48px);
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    background-color: #ebecef;
+    z-index: -1;
+}
+
+.content .sidebar {
+    width: var(--sidebar-width);
+    background-color: var(--color-sidebar);
+    background-image: url("/assets/images/sidebar-bg-image.svg");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.content .sidebar.shrink-mode {
+    width: var(--sidebar-collapsed-width);
+}
+
+.content .main-content-container {
+    background-color: var(--color-gray-50);
+    overflow: auto;
+    height: 100%;
+    border-radius: 3px;
+    display: flex;
+}
+
+
+
+/* Content Title Header */
+.title-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px 0 24px;
+}
+
+.title-header .title-left {
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 8px;
+    padding-bottom: 4px;
+}
+
+.title-header .title-right {
+    display: flex;
+}
+
+.title-header .title-right .item-head-left {
+    width: auto;
+    display: flex;
+    font-weight: 500;
+    font-size: 14px !important;
+    height: 36px !important;
+    padding: 8px 12px !important;
+    border-radius: 4px !important;
+}
+
+.title-right .item-head-left .title-name {
+    padding-left: 8px;
+}
+
+.title-right .more-insert-option {
+    width: 40px !important;
+    height: 36px;
+    margin-left: -4px;
+    border-left: 1px solid #176cd1;
+    background: #2680eb !important;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    justify-content: center;
+    display: flex;
+    z-index: 3;
+}
+
+/* Legacy Table Content Wrapper */
+.main-table-content {
+    width: 100%;
+    height: calc(100% - 300px);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    flex: 1;
+}
+
+.table-wrapper {
+    border-radius: 4px;
+    min-width: 0;
+    height: 100%;
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+

@@ -1,0 +1,489 @@
+/* Table Component */
+
+/* Table Scroll Container */
+.table-scroll {
+    position: relative;
+    z-index: 1;
+    overflow: auto;
+    flex: 1;
+    max-height: calc(100% - 50px);
+}
+
+.table-scroll table {
+    width: 100%;
+    min-width: 1280px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Resizable Table Functionality */
+.table-resizable.resizing,
+.table-resizable th::before {
+    cursor: col-resize;
+    user-select: none;
+}
+
+.table-resizable th {
+    position: relative;
+    cursor: pointer;
+}
+
+.table-resizable th::before {
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1em;
+}
+
+.table-resizable th:last-of-type::before {
+    display: none;
+}
+
+/* Custom Table Header */
+.custom-table-header {
+    display: flex;
+    background-color: var(--color-gray-25);
+    border-bottom: 1px solid var(--color-gray-200);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    user-select: none;
+}
+
+.custom-th {
+    padding: var(--spacing-lg) var(--spacing-lg);
+    font-weight: var(--font-weight-semibold);
+    border-right: 1px solid var(--color-gray-200);
+    position: relative;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.custom-th .th-content {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.column-resizer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    cursor: col-resize;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.column-resizer:hover,
+.column-resizer.resizing {
+    background-color: var(--color-primary);
+}
+
+/* Table Toolbar */
+.table-toolbar {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.search-table-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-sm);
+    padding: 6px 16px;
+    width: 270px;
+    gap: var(--spacing-sm);
+}
+
+.search-table-wrapper .icon-ai {
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+}
+
+.search-table-input {
+    border: none;
+    outline: none;
+    background: transparent;
+    padding-left: 8px;
+    flex: 1;
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+    min-width: 0;
+}
+
+.search-table-input::placeholder {
+    color: var(--color-gray-500);
+}
+
+.table-actions {
+    gap: var(--spacing-sm);
+}
+
+.table-action-btn {
+    background-color: #ffffff;
+    height: 35px;
+    padding: 8px;
+    border: 1px solid #e0e6ec;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.table-action-btn:hover {
+    background-color: var(--color-gray-50);
+}
+
+/* Data Table */
+.table-content {
+    overflow-x: auto;
+    flex: 1;
+    max-height: calc(100% - 50px);
+    position: relative;
+}
+
+.data-table {
+    border-collapse: collapse;
+    font-size: var(--font-size-base);
+    min-width: 100%;
+    width: max-content;
+    table-layout: fixed;
+}
+
+/* Table Headers */
+.data-table thead th {
+    height: 48px!important;
+    background: var(--color-gray-25);
+    color: var(--color-black);
+    position: -webkit-sticky;
+    font-family: var(--font-family-base);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    padding: var(--spacing-lg) var(--spacing-lg);
+    font-weight: var(--font-weight-semibold);
+    border-bottom: 1px solid var(--color-gray-200);
+    border-right: 1px solid var(--color-gray-200);
+    text-align: left;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-weight: 700;
+    padding: 8px;
+}
+
+/**
+ * Sortable Column Styles
+ * 
+ * Provides visual feedback for sortable columns:
+ * - Hover effect indicates clickability
+ * - Sort indicators (▲/▼) show current sort direction
+ * - Smooth transitions for better UX
+ */
+.data-table thead th.sortable {
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s ease;
+}
+
+.data-table thead th.sortable:hover {
+    background: var(--color-gray-50);
+}
+
+/* Sort indicator styling */
+.data-table thead th .sort-indicator {
+    display: inline-block;
+    margin-left: 6px;
+    font-size: 20px;
+    vertical-align: middle;
+    opacity: 0.9;
+}
+
+/* Table Rows */
+.data-table td {
+    padding: 8px;
+    border-bottom: 1px solid var(--color-gray-100);
+    color: var(--color-black);
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.data-table tbody tr {
+    height: 48px;
+    background-color: var(--color-white);
+    border: none;
+}
+
+.data-table tbody tr.selected,
+.data-table tbody tr.selected .col-checkbox,
+.data-table tbody tr.selected .col-action-fixed {
+    background-color: var(--color-bg-hover) !important;
+}
+
+.data-table tbody tr:hover,
+.data-table tbody tr:hover .col-checkbox,
+.data-table tbody tr:hover .col-action-fixed {
+    background-color: var(--color-bg-hover);
+}
+
+.data-table tbody tr.row-highlight,
+.data-table tbody tr.row-highlight .col-checkbox,
+.data-table tbody tr.row-highlight .col-action-fixed {
+    background-color: var(--color-bg-highlight);
+}
+
+.data-table tbody tr.row-highlight:hover,
+.data-table tbody tr.row-highlight:hover .col-checkbox,
+.data-table tbody tr.row-highlight:hover .col-action-fixed {
+    background-color: var(--color-bg-highlight-hover);
+}
+
+/* Fixed Columns */
+.data-table .col-checkbox {
+    position: -webkit-sticky;
+    position: sticky;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    background-color: var(--color-gray-25);
+}
+
+.data-table thead th.col-checkbox {
+    z-index: 11;
+}
+
+.data-table tbody .col-checkbox {
+    background-color: var(--color-white);
+    border: none !important;
+}
+
+.data-table .col-action-fixed {
+    position: sticky;
+    right: 0;
+    top: 0;
+    background-color: var(--color-gray-25);
+    border-left: 1px solid var(--color-gray-200) !important;
+    z-index: 10;
+    width: 50px;
+}
+
+.data-table thead th:last-child {
+    z-index: 11;
+}
+
+.data-table tbody .col-action-fixed {
+    background-color: var(--color-white);
+    border: none !important;
+}
+
+.data-table tbody .col-action-fixed .icon {
+    display: none;
+}
+
+.data-table tbody tr:hover .col-action-fixed .icon {
+    display: block;
+}
+
+.data-table tbody tr:hover .col-action-fixed {
+    cursor: pointer;
+}
+
+.data-table td .employee-status {
+    color: var(--color-success);
+}
+
+.col-ellipsis {
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.col-checkbox {
+    width: 50px;
+    text-overflow: clip !important;
+}
+
+/* User Info in Table */
+.user-info {
+    gap: var(--spacing-sm);
+    min-width: 0;
+    flex: 1;
+}
+
+.user-info .avatar-circle {
+    flex-shrink: 0;
+}
+
+.user-info-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+}
+
+.user-info-name-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    min-width: 0;
+}
+
+.user-info-name-row .icon {
+    flex-shrink: 0;
+}
+
+.user-info-name-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    min-width: 0;
+    flex: 1;
+}
+
+.user-info span {
+    cursor: pointer;
+}
+
+.user-info span:hover {
+    text-decoration: underline;
+    color: var(--color-primary);
+}
+
+.employee-status {
+    flex-shrink: 0;
+}
+
+
+.avatar-circle {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-circle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-semibold);
+    flex-shrink: 0;
+}
+
+
+/* Badge Status */
+.badge-status {
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    color: var(--color-white);
+    white-space: nowrap;
+}
+
+/* Table Footer */
+.table-footer {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-top: 1px solid var(--color-gray-200);
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+    background-color: #f5f5f5;
+}
+
+.table-info {
+    color: var(--color-black);
+
+}
+
+.pagination-controls {
+    gap: var(--spacing-lg);
+}
+
+.page-size-label {
+    color: var(--color-black);
+
+}
+
+.page-size-select {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border: 1px solid var(--color-gray-300);
+    border-radius: var(--radius-sm);
+    padding: 7px 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+.page-info {
+    color: var(--color-gray-700);
+}
+
+.pagination-buttons {
+    display: flex;
+    gap: var(--spacing-xs);
+}
+
+.btn-pagination {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f5f5f5;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: none;
+}
+
+.btn-pagination:hover:not(:disabled) {
+    background-color: var(--color-gray-50);
+}
+
+.btn-pagination:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+.btn-pagination .icon {
+    width: 16px;
+    height: 16px;
+}
+
+/* Icon wrapper for badges */
+.user-info .icon-wrapper {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 4px;
+    flex-shrink: 0;
+}
+
+.user-info .icon-wrapper .icon {
+    flex-shrink: 0;
+}
+
+.user-info .icon-wrapper .badge {
+    position: absolute;
+    top: -6px;
+    width: 14px;
+    right: -6px;
+    height: 14px;
+    background-color: #f00;
+    text-align: center;
+    font-size: 10px;
+    border-radius: 50%;
+    color: #ffffff;
+}

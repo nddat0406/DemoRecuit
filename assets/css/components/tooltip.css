@@ -1,0 +1,41 @@
+/* Tooltip Component */
+.tooltip {
+    overflow: visible;
+}
+
+.tooltip .tooltip-text {
+    background: var(--color-gray-900);
+    color: var(--color-white);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5em;
+    padding: var(--spacing-sm) var(--spacing-md);
+    white-space: nowrap;
+    border-radius: var(--radius-sm);
+    position: absolute;
+    top: calc(100% + var(--spacing-sm));
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: var(--z-tooltip);
+    transition: all var(--transition-base);
+}
+
+.tooltip:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    top: calc(100% + var(--spacing-md));
+}
+
+.tooltip .tooltip-text::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-style: solid;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent var(--color-gray-900) transparent;
+}

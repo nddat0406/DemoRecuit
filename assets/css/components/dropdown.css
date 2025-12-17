@@ -1,0 +1,64 @@
+/* Dropdown Component */
+.btn-dropdown-grid {
+    position: relative;
+}
+
+.dropdown-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.app-dropdown {
+    position: absolute;
+    top: calc(100% + var(--spacing-xs));
+    right: 0;
+    background: var(--color-white);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-lg);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all var(--transition-base);
+    z-index: var(--z-dropdown);
+}
+
+.app-dropdown.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.wrap-item-add-cadidate {
+    padding: var(--spacing-sm) 0;
+}
+
+.app-dropdown-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md) var(--spacing-lg);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    font-size: var(--font-size-base);
+    color: var(--color-black);
+}
+
+.app-dropdown-item:hover {
+    background-color: var(--color-gray-50);
+}
+
+.app-dropdown-item .ic-svg,
+.app-dropdown-item .icon {
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    flex-shrink: 0;
+}
+
+.app-dropdown-item .pl-3 {
+    padding-left: var(--spacing-md);
+}

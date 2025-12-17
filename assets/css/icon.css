@@ -1,0 +1,334 @@
+.icon {
+    width: 23px;
+    height: 23px;
+    mask-image: url('../icons/ICON.svg');
+    mask-repeat: no-repeat;
+    background-color: white;
+}
+
+/* Sidebar Icons */
+.icon-sb-recruitment {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -94px -113px;
+}
+
+.icon-sb-candidate {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -24px -112px;
+}
+
+/* Lịch */
+.icon-sb-calendar {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -144px -113px;
+}
+
+/* Kho tiềm năng */
+.icon-sb-potential {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: 0px -112px;
+}
+
+/* Chiến dịch tuyển dụng */
+.icon-sb-strategy {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -73px -633px;
+}
+
+/* Công việc */
+.icon-sb-job {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -336px -113px;
+}
+
+/* aiMarketing */
+.icon-sb-email {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -160px -248px;
+}
+
+/* Trao đổi với ứng viên */
+.icon-sb-chat {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -72px -845px;
+}
+
+/* Báo cáo */
+.icon-sb-report {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: -72px -113px;
+}
+
+/* Thiết lập */
+.icon-sb-settings {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    mask-position: 0px -136px;
+}
+
+/* Kiến thức hữu ích */
+.icon-knowledge-trigger {
+    width: 24px;
+    height: 24px;
+    border-radius: 16px;
+    background-position: center;
+    background-size: 24px;
+    background-repeat: no-repeat;
+    overflow: unset;
+    cursor: pointer;
+    background-image: url("/assets/icons/icon-knowledge.svg");
+}
+.icon-left {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    mask-position: -60px -696px;
+}
+
+.icon-tick-green {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    margin-right: 4px;
+    background-color: var(--color-success);
+    mask-position: -208px -32px;
+}
+
+.icon-right {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    mask-position: -40px -696px;
+}
+
+.icon-switch-app {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background-image: url("/assets/icons/icon-swich-app-white.svg");
+}
+
+.icon-search {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-right: 8px;
+    background-color: #999;
+    mask-position: -1px -658px;
+}
+
+.icon-clock {
+    width: 16px;
+    height: 16px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #999;
+    mask-position: -272px -64px;
+}
+
+.icon-add {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    mask-position: -20px -656px;
+}
+
+.icon-down {
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    mask-position: -32px -48px;
+}
+
+/* Dropdown Icons */
+.icon-magic-pen {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin: 6px;
+    background-color: black;
+    mask-position: -80px -656px;
+}
+
+.icon-order-left {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    margin: 6px;
+    background-color: black;
+    mask-position: -80px -676px;
+}
+
+.icon-edit {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background-color: #999;
+    mask-position: -180px -656px;
+}
+.icon-dot-import {
+    width: 15px;
+    min-width: 15px;
+    height: 15px;
+    background-color: #999;
+    mask-position:-305px -33px;
+}
+/* Header Icons */
+
+.header-icon-item .header-icon {
+    width: 24px;
+    height: 24px;
+    mask-image: none;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.icon-globe {
+    width: 20px;
+    height: 21px;
+    background-color: #7a8188;
+    margin-bottom: 2px;
+    mask-position: 0px -608px;
+}
+
+.icon-megaphone {
+    background-image: url("/assets/icons/icon-bell.svg");
+}
+
+.icon-cart {
+    width: 20px;
+    height: 20px;
+    background-image: url("/assets/icons/cs-icon-store.svg");
+}
+
+.icon-user {
+
+    background-image: url("/assets/icons/icon-invite.svg");
+}
+
+.icon-megaphone {
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/icons/icon-notification-version.svg");
+}
+
+.icon-message {
+    width: 24px;
+    height: 24px;
+    background-image: url("/assets/icons/icon-message.svg");
+}
+
+.icon-help {
+    background-image: url("/assets/icons/icon-question.svg");
+}
+
+.icon-settings {
+    background-image: url("/assets/icons/icon-more.svg");
+}
+
+.icon-calendar {
+    background-image: url("/assets/icons/icon-knowledge.svg");
+}
+
+/* Table Icons */
+.icon-ai {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232196F3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h-1.73c-.34.6-.98 1-1.73 1h-.54A7 7 0 0 1 7 21v-1.73c-.6-.34-1-.98-1-1.73v-.54A7 7 0 0 1 2 7h1.73c.34-.6.98-1 1.73-1h.54A7 7 0 0 1 12 2Z'/%3E%3Cpath d='M12 12h.01'/%3E%3C/svg%3E");
+}
+
+.icon-filter {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background-color: #999;
+    mask-position: -40px -656px;
+}
+
+.icon-export {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    background-color: #999;
+    mask-position: -60px -656px;
+}
+
+.icon-interactive-history {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background-color: #999;
+    mask-position: 0 -844px;
+}
+
+.icon-settings-table {
+    width: 24px;
+    height: 24px;
+    min-width: 24px;
+    background-color: #999;
+    mask-position: -24px -608px;
+}
+
+.icon-chevron-left {
+    background-color: #666;
+    mask-position: -60px -696px;
+}
+
+.icon-chevron-right {
+    background-color: #666;
+    mask-position: -40px -696px;
+}
+
+.icon-link-small {
+    width: 20px;
+    height: 20px;
+    background-color: #666;
+    margin-left: 8px;
+    mask-position: -260px -656px;
+}
+
+.icon-ai-search-candidate {
+    width: 24px;
+    height: 24px !important;
+    background-image: url("/assets/icons/ai-search-candidate.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    animation: spinFFF 20s infinite;
+}
+
+.icon-ai-search-candidate::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("/assets/icons/ai-search-candidate-start.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    animation: inspinFFF 20s infinite;
+}

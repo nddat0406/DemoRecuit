@@ -1,0 +1,66 @@
+/* Button Components */
+.btn {
+    height: 36px !important;
+    font-size: var(--font-size-base) !important;
+    padding: 7px var(--spacing-lg) !important;
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid #e0e6ec;
+    color: #1e2633;
+}
+
+.btn-primary {
+    background-color: #2680eb !important;
+    color: #ffffff !important;
+    border-color: transparent !important;
+}
+
+/* Title Header Buttons */
+.title-header {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-lg) var(--spacing-2xl) 0 var(--spacing-2xl);
+}
+
+.title-header .title-left {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    padding-top: var(--spacing-sm);
+    padding-bottom: var(--spacing-xs);
+}
+
+.title-header .title-right {
+    display: flex;
+}
+
+.title-header .title-right .item-head-left {
+    width: auto;
+    display: flex;
+    font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-base) !important;
+    height: 36px !important;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+.title-right .item-head-left .title-name {
+    padding-left: var(--spacing-sm);
+}
+
+.title-right .more-insert-option {
+    width: 40px !important;
+    height: 36px;
+    margin-left: -4px;
+    border-left: 1px solid #176cd1;
+    background: var(--color-primary) !important;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    justify-content: center;
+    display: flex;
+    z-index: 3;
+}
+
+.title-right .item-head-left {
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+}
